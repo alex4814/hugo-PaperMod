@@ -1,15 +1,5 @@
 {{- /* theme-toggle is enabled */}}
 {{- if (not site.Params.disableThemeToggle) }}
-
-<script>
-const toggleThemeCallbacks = [];
-window.addEventListener('toggle-theme', function(e) {
-    for (const func of toggleThemeCallbacks) {
-        func(e.detail);
-    }
-});
-</script>
-
 {{- /* theme is light */}}
 {{- if (eq site.Params.defaultTheme "light") }}
 <script>
